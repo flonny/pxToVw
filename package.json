@@ -1,0 +1,19 @@
+{
+  "name": "pxtovw",
+  "version": "0.0.1",
+  "description": "According to one stylesheet, generate vw version stylesheet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "pxtovw": "./bin/pxtovw.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^5.1.0",
+    "css": "^2.2.4",
+    "fs-extra": "^9.0.1"
+  }
+}
