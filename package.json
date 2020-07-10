@@ -4,16 +4,19 @@
   "description": "According to one stylesheet, generate vw version stylesheet",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "bin": {
     "pxtovw": "./bin/pxtovw.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^5.1.0",
     "css": "^2.2.4",
     "fs-extra": "^9.0.1"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
   }
 }

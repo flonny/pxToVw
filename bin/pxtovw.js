@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // this code from px2rem, thanks px2rem
+// 该文件大部份代码来自 px2rem，感谢
 var program = require("commander");
 var Pxtovw = require("../index");
 var pkg = require('../package.json');
@@ -50,7 +51,6 @@ program.args.forEach(function (filePath) {
   if (path.extname(filePath) !== ".css") {
     return;
   }
-
   var cssText = fs.readFileSync(filePath, { encoding: "utf8" });
   var outputPath = program.output || path.dirname(filePath);
   var fileName = path.basename(filePath);
