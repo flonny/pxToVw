@@ -32,6 +32,10 @@ program
   .version(pkg.version)
   .option('-w, --viewportWidth [value]', 'set `vw` unit value (default: 750)', 750)
   .option("-o, --output [path]", "the output file dirname")
+  .option('-p, --vwPrecision [value]', 'set vw value precision (default: 6)', 6)
+  .option("-u, --unitToConvert [value]", "set need to convert unit (default: 'px')",'px')
+  .option("-m, --minPixelValue [value]", "mix convert px value (default: 1)",1)
+  
   .parse(process.argv);
 
 if (!program.args.length) {
@@ -40,9 +44,9 @@ if (!program.args.length) {
 }
 var config = {
   viewportWidth:  deserializeValue(program.viewportWidth),
-  unitPrecision: 5,
-  unitToConvert: "px",
-  minPixelValue: 1,
+  unitPrecision: deserializeValue(program.vwPrecision),
+  unitToConvert: deserializeValue(program.unitToConvert),
+  minPixelValue: deserializeValue(program.minPixelValue),
 };
 
 var pxtovwIns = new Pxtovw(config);

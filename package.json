@@ -1,6 +1,6 @@
 {
   "name": "pxtovw",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "According to one stylesheet, generate vw version stylesheet",
   "main": "index.js",
   "scripts": {
